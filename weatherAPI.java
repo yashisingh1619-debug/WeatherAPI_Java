@@ -21,10 +21,7 @@ public class weatherAPI {
 
             HttpClient client = HttpClient.newHttpClient();
 
-            HttpRequest request = HttpRequest.newBuilder()
-                  .uri(URI.create(apiUrl))
-                  .GET()
-                  .build();
+            HttpRequest request = HttpRequest.newBuilder().uri(URI.create(apiUrl)).GET().build();
 
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
